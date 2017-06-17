@@ -430,6 +430,7 @@ class CI_Profiler
         echo '</style>'."\n";
         echo '<script type="text/javascript">'."\n";
         echo self::js_assets();
+        echo 'jQuery.noConflict(true);'; // jQuery Not Found Bug Fix
         echo '</script>'."\n";
 
         return ob_get_clean();
